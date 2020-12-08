@@ -1,4 +1,4 @@
-import sys
+import sys, time
 from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QPushButton, QWidget
 from PyQt5.QtCore import Qt
 
@@ -30,4 +30,5 @@ app = QApplication(sys.argv)
 window = MainWindow()       # 把这里替换为QWidget
 window.show()
 
-app.exec_()
+
+app.exec_()     # 启动窗口并且等待关闭
