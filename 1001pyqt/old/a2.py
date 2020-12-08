@@ -31,4 +31,5 @@ window = MainWindow()       # 把这里替换为QWidget
 window.show()
 
 
-app.exec_()     # 启动窗口并且等待关闭
+x = app.exec_()     # 启动窗口并且等待关闭, 关闭返回0(int)
+
