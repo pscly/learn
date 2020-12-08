@@ -3,21 +3,13 @@
 # 创建日期: 
 # 用意：
 
-# import sys, time
-# from PyQt5 import QtWidgets
-#
-# app = QtWidgets.QApplication([])
-# windows = QtWidgets.QWidget()
-#
-# windows.resize(500,500)
-# windows.show()
-# sys.exit(app.exec_())
 
 import sys
 from PyQt5 import QtWidgets,QtGui
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout
 
-app = QtWidgets.QApplication(sys.argv)
-windows = QtWidgets.QWidget()
+app = QApplication(sys.argv)
+windows = QWidget()
 windows.resize(500,500)
 windows.move(100,100)
 
