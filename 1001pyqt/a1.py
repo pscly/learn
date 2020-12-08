@@ -2,21 +2,27 @@
 # 作者:Pscly
 # 创建日期: 
 # 用意：
+
+# import sys, time
+# from PyQt5 import QtWidgets
+#
+# app = QtWidgets.QApplication([])
+# windows = QtWidgets.QWidget()
+#
+# windows.resize(500,500)
+# windows.show()
+# sys.exit(app.exec_())
+
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5 import QtWidgets,QtGui
 
-# You need one (and only one) QApplication instance per application.
-# Pass in sys.argv to allow command line arguments for your app.
-# If you know you won't use command line arguments QApplication([]) is fine.
+app = QtWidgets.QApplication(sys.argv)
+windows = QtWidgets.QWidget()
+windows.resize(500,500)
+windows.move(100,100)
 
-app = QApplication(sys.argv)    # 可以是app = QApplication([])
-
-window = QWidget()
-window.show() # 重要！ 默认情况下窗口隐藏
-
-
-# Start the event loop.
-app.exec_()
-
-# Your application won't reach here until you exit and the event
-# loop has stopped.
+windows.setWindowTitle('Title')
+# set icon
+windows.setWindowIcon(QtGui.QIcon('a1.png'))
+windows.show()
+sys.exit(app.exec_())
