@@ -8,21 +8,25 @@ class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
 
-        self.setWindowTitle("窗口标题")
+        self.resize(400, 800)
 
-        label = QLabel("这是一个pyqt的窗口")
-
-        # qt还有更多的插件http://doc.qt.io/qt-5/qt.html
-        label.setAlignment(Qt.AlignCenter)
-
-        # Set the central widget of the Window. Widget will expand
-        # to take up all the space in the window by default.
-        self.setCentralWidget(label)
+        # self.setWindowTitle("窗口标题")
+        #
+        # label = QLabel("这是一个pyqt的窗口")
+        #
+        # # qt还有更多的插件http://doc.qt.io/qt-5/qt.html
+        # label.setAlignment(Qt.AlignCenter)  # 居中？
+        #
+        #
+        # # Set the central widget of the Window. Widget will expand
+        # # to take up all the space in the window by default.
+        # self.setCentralWidget(label)
 
 class CustomButton(QPushButton):
 
     def keyPressEvent(self, e):
         # My custom event handling
+        print('56')
         super(CustomButton, self).keyPressEvent(e)
 
 app = QApplication(sys.argv)
