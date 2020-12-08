@@ -15,6 +15,6 @@ windows.move(100,100)
 
 windows.setWindowTitle('Title')
 # set icon
-windows.setWindowIcon(QtGui.QIcon('a1.png'))
+windows.setWindowIcon(QtGui.QIcon('../a1.png'))
 windows.show()
 sys.exit(app.exec_())
