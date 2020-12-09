@@ -3,7 +3,7 @@
 # 创建日期: 
 # 用意：
 import sys
-from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QToolBar, QAction, QStatusBar
+from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QToolBar, QAction, QStatusBar, QCheckBox
 from PyQt5.QtCore import Qt, QSize
 from PyQt5.QtGui import QIcon
 
@@ -47,6 +47,18 @@ class MainWindow(QMainWindow):
         # toolbar.addAction(button_action1)
 
 
+        # # # 3 的最后一个任务
+        button_action2 = QAction(QIcon("bug.png"), "Your button2", self)
+        button_action2.setStatusTip("This is your button2")
+        button_action2.triggered.connect(self.onMyToolBarButtonClick)
+        button_action2.setCheckable(True)
+
+        toolbar.addAction(button_action2)
+
+
+
+        toolbar.addWidget(QLabel("Hello"))
+        toolbar.addWidget(QCheckBox())    # QCheckBox 需要引入
 
 
 
